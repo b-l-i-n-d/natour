@@ -38,6 +38,7 @@ body {
     padding: 3rem;
 }
 
+main,
 section {
     display: block;
 }
@@ -45,6 +46,60 @@ section {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Buttons */
+
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 100px;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--white {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.btn--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn--white::after {
+    background-color: var(--bg-primary);
 }
 
 /* Navigation */
@@ -65,6 +120,7 @@ a {
     position: relative;
     margin-top: 3rem;
 }
+
 .navigation__icon,
 .navigation__icon::before,
 .navigation__icon::after {
@@ -73,6 +129,7 @@ a {
     background-color: var(--bg-secondary);
     display: inline-block;
 }
+
 .navigation__icon::before,
 .navigation__icon::after {
     content: "";
@@ -80,9 +137,11 @@ a {
     left: 0;
     transition: all 0.2s;
 }
+
 .navigation__icon::before {
     top: -1rem;
 }
+
 .navigation__icon::after {
     top: 1rem;
 }
@@ -139,8 +198,7 @@ a {
     margin: 1rem;
 }
 
-.navigation__link:link,
-.navigation__link:visited {
+.navigation__link {
     display: inline-block;
     font-size: 3rem;
     font-weight: 300;
@@ -248,66 +306,6 @@ a {
     animation: moveInRight 1s ease-out;
 }
 
-/* Buttons */
-
-.btn {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 100px;
-    border-radius: 10rem;
-    transition: all 0.2s;
-    position: relative;
-    font-size: 1.6rem;
-    border: none;
-    cursor: pointer;
-}
-
-.btn--white {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-}
-
-.btn--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s;
-    animation-fill-mode: backwards;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.btn:link,
-.btn:visited {
-    color: var(--text-primary);
-    background-color: var(--bg-primary);
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn--white::after {
-    background-color: var(--bg-primary);
-}
-
 /* Breaklpoints */
 
 @media (max-width: 56.25rem) {
@@ -346,15 +344,46 @@ a {
     }
 }
 
-/* @media (max-width: 75em) {
-    html {
-        font-size: 56.25%;
-    }
+/* About Section */
 
-    body {
-        padding: 0;
-    }
-} */
+.section-about {
+    background-color: var(--bg-primary);
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+.section-header {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-about__text {
+    margin-bottom: 4rem;
+}
+
+.section-about__text {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.section-about__text p {
+    font-size: 1.7rem;
+    color: var(--text-primary);
+}
+
+.section-about__text h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
 
 /* Animations */
 
