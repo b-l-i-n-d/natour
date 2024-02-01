@@ -69,6 +69,11 @@ a {
     color: var(--text-primary);
 }
 
+.btn-accent {
+    background-color: #7ed56f;
+    color: var(--text-secondary);
+}
+
 .btn-text {
     background-color: transparent;
     color: var(--text-accent);
@@ -113,6 +118,10 @@ a {
 
 .btn-primary::after {
     background-color: var(--bg-primary);
+}
+
+.btn-accent::after {
+    background-color: #7ed56f;
 }
 
 /* Heading */
@@ -469,14 +478,207 @@ a {
 
 .section-tours {
     background-color: var(--bg-primary);
-    padding-top: 25rem;
+    padding: 25rem 0;
     margin-top: -20vh;
 }
 
 .section-tours .section-row {
     display: flex;
     justify-content: space-between;
-    gap: 6rem;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    /* outline-offset: 1rem; */
+}
+
+.section-tours .btn-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.tour-card {
+    border-radius: 3px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.tour-card .tour-card-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: all 0.8s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.tour-card-front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+}
+
+.tour-card-front .tour-card-img {
+    height: 25rem;
+    border-radius: 3px;
+    position: relative;
+    overflow: auto;
+    z-index: 1;
+}
+
+.tour-card-front .tour-card-img::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    display: block;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.tour-card-front .tour-card-img-1::before {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(255, 187, 0, 0.7),
+            rgba(255, 119, 48, 0.7)
+        ),
+        url("https://natour.netlify.app/img/nat-5.jpg");
+}
+
+.tour-card-front .tour-card-img-2::before {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(126, 213, 111, 0.7),
+            rgba(40, 180, 133, 0.7)
+        ),
+        url("https://natour.netlify.app/img/nat-6.jpg");
+}
+
+.tour-card-front .tour-card-img-3::before {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(41, 152, 255, 0.7),
+            rgba(86, 67, 250, 0.7)
+        ),
+        url("https://natour.netlify.app/img/nat-7.jpg");
+}
+
+.tour-card-front .tour-card-heading {
+    text-align: right;
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.tour-card-front .tour-card-heading span {
+    padding: 0.7rem 1rem;
+}
+
+.tour-card-front .tour-card-heading.tour-card-heading-1 span {
+    background: linear-gradient(to right, #ffb900, #ff7730);
+}
+
+.tour-card-front .tour-card-heading.tour-card-heading-2 span {
+    background: linear-gradient(to right, #7ed56f, #28b485);
+}
+
+.tour-card-front .tour-card-heading.tour-card-heading-3 span {
+    background: linear-gradient(to right, #2998ff, #5643fa);
+}
+
+.tour-card-front .tour-card-front-list {
+    font-size: 1.5rem;
+    list-style: none;
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 4rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tour-card-front .tour-card-front-list-item {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-primary);
+}
+
+.tour-card-front .tour-card-front-list hr {
+    width: 80%;
+    margin: 1rem auto;
+    border: none;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.tour-card:hover .tour-card-inner {
+    transform: rotateY(180deg);
+}
+
+.tour-card-front,
+.tour-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+}
+
+.tour-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tour-card-back-1 {
+    background: linear-gradient(to right bottom, #ffb900, 70%, #ff7730);
+}
+
+.tour-card-back-2 {
+    background: linear-gradient(to right bottom, #7ed56f, 70%, #28b485);
+}
+
+.tour-card-back-3 {
+    background: linear-gradient(to right bottom, #2998ff, 70%, #5643fa);
+}
+
+.tour-card-back .tour-card-back-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.tour-card-back .tour-card-back-price {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.tour-card-back .tour-card-back-btn {
+    margin-top: 6rem;
 }
 
 /* Breaklpoints */
