@@ -138,7 +138,7 @@ a {
     text-align: center;
     margin-bottom: 6rem;
     text-transform: uppercase;
-    background: linear-gradient(to right, #7ed56f, #28b485);
+    background: linear-gradient(to right, #7ed56f, 70%, #28b485);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -420,6 +420,63 @@ a {
     z-index: 100;
     outline: 1rem solid #7ed56f;
     border-radius: 1rem;
+}
+
+/* Features section */
+
+.section-features {
+    margin-top: -20vh;
+    display: flex;
+    background-image: linear-gradient(
+            to right bottom,
+            var(--bg-accent-light),
+            var(--bg-accent)
+        ),
+        url("https://images.pexels.com/photos/464440/pexels-photo-464440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: skewY(-7deg);
+    padding: 20rem 0;
+}
+
+.section-features .section-row {
+    transform: skewY(7deg);
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    padding: 4rem 2rem 1rem 2rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.feature-card-icon {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Tours Section */
+
+.section-tours {
+    background-color: var(--bg-primary);
+    padding-top: 25rem;
+    margin-top: -20vh;
+}
+
+.section-tours .section-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
 }
 
 /* Breaklpoints */
