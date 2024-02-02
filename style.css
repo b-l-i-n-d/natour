@@ -70,7 +70,7 @@ a {
 }
 
 .btn-accent {
-    background-color: #7ed56f;
+    background-color: #28b485;
     color: var(--text-secondary);
 }
 
@@ -147,7 +147,7 @@ a {
     text-align: center;
     margin-bottom: 6rem;
     text-transform: uppercase;
-    background: linear-gradient(to right, #7ed56f, 70%, #28b485);
+    background: linear-gradient(to right, #7ed56f, 50%, #28b485);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -795,6 +795,133 @@ a {
     display: inline-flex;
     justify-content: center;
     width: 100%;
+}
+
+/* Booking Section */
+
+.section-book {
+    background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+    position: relative;
+    padding: 10rem 0;
+}
+
+.section-book .section-row {
+    margin-inline: auto;
+}
+
+.section-book .book-card {
+    background: linear-gradient(
+            105deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.9) 55%,
+            transparent 55%
+        ),
+        url("https://images.pexels.com/photos/464440/pexels-photo-464440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    padding: 6rem 8rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.section-book .section-header {
+    text-align: left;
+}
+
+.section-book .book-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+}
+
+.section-book .book-card-form .form-input {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    padding: 1.5rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.section-book .book-card-form .form-input::placeholder {
+    color: var(--text-primary);
+}
+
+.section-book .book-card-form .form-input:focus {
+    box-shadow: 0 1rem 2rem rgba(216, 56, 56, 0.1);
+    border-bottom: 3px solid #ff7730;
+}
+
+.section-book .book-card-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 1rem;
+}
+
+.section-book .book-card-form .form-group .container {
+    display: block;
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.section-book .book-card-form .form-group .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.section-book .book-card-form .form-group .container .checkmark {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    height: 1.2rem;
+    width: 1.2rem;
+    outline: #28b485 5px solid;
+    outline-offset: 0.5rem;
+    border-radius: 50%;
+}
+
+.section-book
+    .book-card-form
+    .form-group
+    .container
+    input:checked
+    ~ .checkmark {
+    background-color: #28b485;
+}
+
+.section-book .book-card-form .form-group .container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.section-book
+    .book-card-form
+    .form-group
+    .container
+    input:checked
+    ~ .checkmark:after {
+    display: block;
+}
+
+.section-book .book-card-form .form-submit-btn {
+    margin-top: 3rem;
 }
 
 /* Breaklpoints */
