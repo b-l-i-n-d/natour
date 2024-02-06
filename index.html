@@ -6,10 +6,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="icon-font.css" />
         <title>Natour</title>
     </head>
     <body>
@@ -50,7 +51,7 @@
             </nav>
         </div>
 
-        <header class="header">
+        <header id="header" class="header">
             <div class="header-logo-container">
                 <img
                     src="https://natour.netlify.app/img/logo-white.png"
@@ -74,16 +75,16 @@
         </header>
 
         <main>
-            <section class="section-about">
+            <section id="section-about" class="section-about">
                 <h1 class="section-header">
                     EXCITING TOURS FOR ADVENTUROUS PEOPLE
                 </h1>
 
                 <div class="section-row about-container">
                     <div class="about-left">
-                        <h2 class="heading-title">
+                        <h3 class="heading-title">
                             You're going to fall in love with nature
-                        </h2>
+                        </h3>
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Proin iaculis eros est, in dignissim nulla
@@ -108,7 +109,9 @@
                             non, condimentum quis lacus.
                         </p>
 
-                        <a href="#" class="btn btn-text">Learn more &rarr;</a>
+                        <a href="#section-about" class="btn btn-text"
+                            >Learn more &rarr;</a
+                        >
                     </div>
                     <div class="about-right">
                         <img
@@ -133,10 +136,10 @@
                 </div>
             </section>
 
-            <section class="section-features">
+            <section id="section-features" class="section-features">
                 <div class="section-row">
                     <div class="feature-card">
-                        <i class="feature-card-icon fa-solid fa-globe"></i>
+                        <i class="feature-card-icon icon-basic-world"></i>
                         <h3 class="heading-title">Explore the world</h3>
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -144,7 +147,7 @@
                         </p>
                     </div>
                     <div class="feature-card">
-                        <i class="feature-card-icon fa-regular fa-compass"></i>
+                        <i class="feature-card-icon icon-basic-compass"></i>
                         <h3 class="heading-title">Meet nature</h3>
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -152,7 +155,7 @@
                         </p>
                     </div>
                     <div class="feature-card">
-                        <i class="feature-card-icon fa-solid fa-map"></i>
+                        <i class="feature-card-icon icon-basic-map"></i>
                         <h3 class="heading-title">Find your way</h3>
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -160,7 +163,7 @@
                         </p>
                     </div>
                     <div class="feature-card">
-                        <i class="feature-card-icon fa-regular fa-heart"></i>
+                        <i class="feature-card-icon icon-basic-heart"></i>
                         <h3 class="heading-title">Live a healthier life</h3>
                         <p class="paragraph">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -170,7 +173,7 @@
                 </div>
             </section>
 
-            <section class="section-tours">
+            <section id="section-tours" class="section-tours">
                 <h1 class="section-header">Most popular tours</h1>
 
                 <div class="section-row">
@@ -178,31 +181,30 @@
                         <div class="tour-card-inner">
                             <div class="tour-card-front">
                                 <div class="tour-card-img tour-card-img-1">
-                                    <div
+                                    <h4
                                         class="tour-card-heading tour-card-heading-1"
                                     >
-                                        <span>The Sea</span>
-                                        <br /><span>Explorer</span>
-                                    </div>
+                                        <span>The Sea Explorer</span>
+                                    </h4>
                                 </div>
                                 <ul class="tour-card-front-list">
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>3 day tours</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>Up to 30 people</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>2 tour guides</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>Sleep in cozy hotels</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>Difficulty: easy</span>
                                     </li>
                                 </ul>
@@ -211,7 +213,7 @@
                                 <h3 class="tour-card-back-heading">ONLY</h3>
                                 <span class="tour-card-back-price"> $297 </span>
                                 <a
-                                    href="#"
+                                    href="#popup"
                                     class="tour-card-back-btn btn btn-primary btn-animated"
                                     >Book now</a
                                 >
@@ -225,28 +227,27 @@
                                     <div
                                         class="tour-card-heading tour-card-heading-2"
                                     >
-                                        <span> The Forest </span>
-                                        <br /><span> Hiker</span>
+                                        <span>The Forest Hiker</span>
                                     </div>
                                 </div>
                                 <ul class="tour-card-front-list">
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span> 7 day tours </span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span> Up to 40 people </span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span> 6 tour guides </span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span> Sleep in provided tents </span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span> Difficulty: medium </span>
                                     </li>
                                 </ul>
@@ -255,7 +256,7 @@
                                 <h3 class="tour-card-back-heading">ONLY</h3>
                                 <span class="tour-card-back-price"> $497 </span>
                                 <a
-                                    href="#"
+                                    href="#popup"
                                     class="tour-card-back-btn btn btn-primary btn-animated"
                                     >Book now</a
                                 >
@@ -269,28 +270,27 @@
                                     <div
                                         class="tour-card-heading tour-card-heading-3"
                                     >
-                                        <span> The Snow</span>
-                                        <br /><span>Adventurer </span>
+                                        <span>The Snow Adventurer </span>
                                     </div>
                                 </div>
                                 <ul class="tour-card-front-list">
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>3 day tours</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>Up to 30 people</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>2 tour guides</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>Sleep in cozy hotels</span>
                                     </li>
                                     <hr />
-                                    <li class="tour-card-front-item">
+                                    <li class="tour-card-front-list-item">
                                         <span>Difficulty: easy</span>
                                     </li>
                                 </ul>
@@ -299,7 +299,7 @@
                                 <h3 class="tour-card-back-heading">ONLY</h3>
                                 <span class="tour-card-back-price"> $297 </span>
                                 <a
-                                    href="#"
+                                    href="#popup"
                                     class="tour-card-back-btn btn btn-primary btn-animated"
                                     >Book now</a
                                 >
@@ -309,13 +309,13 @@
                 </div>
 
                 <div class="btn-row">
-                    <a href="#" class="btn btn-accent btn-animated"
+                    <a href="#section-tours" class="btn btn-accent btn-animated"
                         >Discover all tours</a
                     >
                 </div>
             </section>
 
-            <section class="section-stories">
+            <section id="section-stories" class="section-stories">
                 <div class="background-video">
                     <video muted loop autoplay class="video-player">
                         <source
@@ -377,35 +377,42 @@
                 </div>
 
                 <div class="btn-row">
-                    <a href="#" class="btn btn-text">Read all stories &rarr;</a>
+                    <a href="#section-stories" class="btn btn-text"
+                        >Read all stories &rarr;</a
+                    >
                 </div>
             </section>
 
-            <section class="section-book">
+            <section id="section-book" class="section-book">
                 <div class="section-row">
                     <div class="book-card">
-                        <div class="book-card-heading">
-                            <h1 class="section-header">
-                                Start booking <br />
-                                now
-                            </h1>
-                        </div>
                         <form class="book-card-form">
-                            <input
-                                type="text"
-                                class="form-input"
-                                id="name"
-                                placeholder="Full name"
-                                required
-                            />
+                            <h1 class="section-header">Start booking now</h1>
+                            <div class="form-input">
+                                <input
+                                    type="text"
+                                    class="input-field"
+                                    id="name"
+                                    placeholder="Full name"
+                                    required
+                                />
+                                <label for="name" class="input-label">
+                                    Full name
+                                </label>
+                            </div>
 
-                            <input
-                                type="email"
-                                class="form-input"
-                                id="email"
-                                placeholder="Email address"
-                                required
-                            />
+                            <div class="form-input">
+                                <input
+                                    type="email"
+                                    class="input-field"
+                                    id="email"
+                                    placeholder="Email address"
+                                    required
+                                />
+                                <label for="email" class="input-label"
+                                    >Email address
+                                </label>
+                            </div>
 
                             <div class="form-group">
                                 <label class="container">
@@ -438,50 +445,113 @@
                 </div>
             </section>
 
-            <footer class="section-footer">
-                <div class="section-row">
-                    <div class="footer-logo-container">
+            <div id="popup" class="popup-window">
+                <div class="popup-content">
+                    <div class="popup-close">
+                        <a href="#section-tours">&times;</a>
+                    </div>
+                    <div class="popup-left">
                         <img
-                            src="https://natour.netlify.app/img/logo-green-2x.png"
-                            alt="Logo"
-                            class="footer-logo"
+                            src="https://natour.netlify.app/img/nat-1-large.jpg"
+                            alt="Tour 1"
+                            class="popup-img"
+                        />
+
+                        <img
+                            src="https://natour.netlify.app/img/nat-2-large.jpg"
+                            alt="Tour 2"
+                            class="popup-img"
                         />
                     </div>
+                    <div class="popup-right">
+                        <h1 class="section-header">Start booking now</h1>
 
-                    <div class="footer-nav">
-                        <div class="footer-left">
-                            <div class="footer-item">
-                                <a href="#">Company</a>
-                            </div>
-                            <div class="footer-item">
-                                <a href="#">Contact us</a>
-                            </div>
-                            <div class="footer-item">
-                                <a href="#">Carrers</a>
-                            </div>
-                            <div class="footer-item">
-                                <a href="#">Privacy policy</a>
-                            </div>
-                            <div class="footer-item">
-                                <a href="#">Terms</a>
-                            </div>
-                        </div>
+                        <h3 class="popup-subtitle">
+                            Important &ndash; Please read these terms before
+                            booking
+                        </h3>
 
-                        <div class="footer-right">
-                            <p>
-                                Built by MONICA GOSSCHALK as part of a couse on
-                                Advanced css by Jonas Schmedtmann on udemy.
-                            </p>
+                        <p class="popup-paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Aliquam fermentum accumsan mauris, ac pharetra
+                            dolor pharetra ac. Suspendisse aliquet aliquam enim,
+                            nec ultrices mauris lobortis vitae. In consequat
+                            felis quis mauris euismod pretium. Nullam
+                            scelerisque nisl ut rutrum pellentesque. Nunc ut
+                            pharetra dui. Nulla vulputate consequat sapien,
+                            finibus gravida erat gravida et. Ut consequat elit
+                            est, ac porta leo cursus ac. Praesent in ornare
+                            nibh. Lorem ipsum dolor sit amet.
+                        </p>
+
+                        <div>
+                            <a href="#" class="btn btn-accent btn-animated"
+                                >Book now</a
+                            >
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
         </main>
 
+        <footer id="footer" class="section-footer">
+            <div class="section-row">
+                <div class="footer-logo-container">
+                    <picture class="footer-logo">
+                        <source
+                            srcset="
+                                https://natour.netlify.app/img/logo-green-small-1x.png 1x,
+                                https://natour.netlify.app/img/logo-green-small-2x.png 2x
+                            "
+                            media="(max-width: 37.5rem)"
+                        />
+                        <img
+                            srcset="
+                                https://natour.netlify.app/img/logo-green-1x.png 1x,
+                                https://natour.netlify.app/img/logo-green-2x.png 2x
+                            "
+                            alt="Full logo"
+                            class="footer-logo"
+                            src="https://natour.netlify.app/img/logo-green-2x.png"
+                        />
+                    </picture>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-left">
+                        <div class="footer-item">
+                            <a href="#">Company</a>
+                        </div>
+                        <div class="footer-item">
+                            <a href="#">Contact us</a>
+                        </div>
+                        <div class="footer-item">
+                            <a href="#">Carrers</a>
+                        </div>
+                        <div class="footer-item">
+                            <a href="#">Privacy</a>
+                        </div>
+                        <div class="footer-item">
+                            <a href="#">Terms</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-right">
+                        Built by
+                        <span class="footer-item">
+                            <a href="#footer">BLIND</a>
+                        </span>
+                        as part of a couse on Advanced css by Jonas Schmedtmann
+                        on udemy.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
         <!-- <script src="script.js"></script> -->
-        <script
+        <!-- <script
             src="https://kit.fontawesome.com/1ae402c3f5.js"
             crossorigin="anonymous"
-        ></script>
+        ></script> -->
     </body>
 </html>
