@@ -300,6 +300,8 @@ a {
 
 .nav-link {
     display: inline-block;
+    pointer-events: none;
+    user-select: none;
     font-size: 3rem;
     font-weight: 300;
     padding: 1rem 2rem;
@@ -330,6 +332,11 @@ a {
 .nav-checkbox:checked ~ .navigation-nav {
     opacity: 1;
     width: 100%;
+}
+
+.nav-checkbox:checked ~ .navigation-nav .nav-link {
+    pointer-events: auto;
+    user-select: auto;
 }
 
 .nav-checkbox:checked ~ .nav-btn .nav-icon {
